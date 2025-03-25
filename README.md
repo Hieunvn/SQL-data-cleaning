@@ -40,3 +40,13 @@ CREATE TABLE club_member_info_cleaned (
 INSERT INTO club_member_info_cleaned
 SELECT * FROM club_member_info cmi;
 ```
+### Clean data and document it
+```sql
+UPDATE club_member_info_cleaned SET full_name = TRIM(full_name);
+```
+
+```sql
+UPDATE club_member_info_cleaned SET full_name = UPPER(full_name);
+```
+
+
